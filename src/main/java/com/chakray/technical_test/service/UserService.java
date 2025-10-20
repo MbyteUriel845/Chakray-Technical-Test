@@ -140,7 +140,7 @@ public class UserService {
 
     public UserResponseDTO createUser(UserCreateDto dto) {
         if (!Validators.isValidRfc(dto.getTaxId())) throw new IllegalArgumentException("Invalid tax_id (RFC format)");
-        if (!Validators.isValidPhoneAndAndresFormat(dto.getPhone())) throw new IllegalArgumentException("Invalid phone or AndresFormat");
+        if (!Validators.isValidPhoneFormat(dto.getPhone())) throw new IllegalArgumentException("Invalid phone or AndresFormat");
         synchronized (users) {
             boolean exists = users.stream().anyMatch(u -> u.getTaxId().equalsIgnoreCase(dto.getTaxId()));
             if (exists) throw new IllegalArgumentException("tax_id must be unique");

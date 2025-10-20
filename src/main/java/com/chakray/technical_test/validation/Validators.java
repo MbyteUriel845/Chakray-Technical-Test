@@ -10,7 +10,7 @@ public class Validators {
         return RFC_PATTERN.matcher(taxId.trim()).matches();
     }
 
-    public static boolean isValidPhoneAndAndresFormat(String phone) {
+    public static boolean isValidPhoneFormat(String phone) {
         if (phone == null) return false;
         if (!phone.matches("^[0-9+ ()-]+$")) return false;
         String digits = phone.replaceAll("\\D", "");
