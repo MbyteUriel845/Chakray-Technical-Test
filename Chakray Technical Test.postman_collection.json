@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "e7aa026b-5c72-48f4-80cc-26bf579a5486",
+		"name": "Chakray Technical Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26645641",
+		"_collection_link": "https://universal-sunset-354761.postman.co/workspace/Global-Denim-Workspace~53069f14-9a1a-412f-bf91-6313baeca02c/collection/26645641-e7aa026b-5c72-48f4-80cc-26bf579a5486?action=share&source=collection_link&creator=26645641"
+	},
+	"item": [
+		{
+			"name": "Get users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users?filter=name co user&sortedBy=email",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "name co user"
+						},
+						{
+							"key": "sortedBy",
+							"value": "email"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"new@mail.com\",\n  \"name\": \"newuser\",\n  \"phone\": \"+52 55 1234 5678\",\n  \"password\": \"miPassword\",\n  \"taxId\": \"ZZZZ990101XXX\",\n  \"addresses\": [\n    {\n      \"id\": 1,\n      \"name\": \"home\",\n      \"street\": \"Calle 1\",\n      \"countryCode\": \"MX\"\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"oscar@gmail.com\",\n  \"name\": \"Oscar Juarez\",\n  \"phone\": \"248 250 16 43\",\n  \"taxId\": \"CUJO0009201M2\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/445ad8f6-6a62-4c54-9c58-5fbad707e237",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"445ad8f6-6a62-4c54-9c58-5fbad707e237"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"new@mail.com\",\n  \"name\": \"newuser\",\n  \"phone\": \"+52 55 1234 5678\",\n  \"password\": \"miPassword\",\n  \"taxId\": \"ZZZZ990101XXX\",\n  \"addresses\": [\n    {\n      \"id\": 1,\n      \"name\": \"home\",\n      \"street\": \"Calle 1\",\n      \"countryCode\": \"MX\"\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/445ad8f6-6a62-4c54-9c58-5fbad707e237",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"445ad8f6-6a62-4c54-9c58-5fbad707e237"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
