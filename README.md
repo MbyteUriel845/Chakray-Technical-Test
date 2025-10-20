@@ -25,7 +25,7 @@ java -jar target/technical-test-0.0.1-SNAPSHOT.jar
 
 3. Open Swagger UI:
 
-http://localhost:8080/swagger-ui.html
+http://localhost:8080/swagger-ui/index.html
 
 ## API Endpoints
 
@@ -93,4 +93,5 @@ docker run -p 8080:8080 technical-test-app
 ## License
 
 MIT License
+
 
